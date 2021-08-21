@@ -52,7 +52,7 @@ import android.view.WindowManager
     fun convertDpToPx(context: Context, dp: Float): Int {
         val resources: Resources = context.getResources()
         val metrics: DisplayMetrics = resources.getDisplayMetrics()
-        val px: Float = dp * (metrics.densityDpi as Float / DisplayMetrics.DENSITY_DEFAULT)
+        val px: Float = dp * (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT)
         return px.toInt()
     }
 
@@ -66,7 +66,7 @@ import android.view.WindowManager
     fun convertPxToDp(context: Context, px: Float): Int {
         val resources: Resources = context.getResources()
         val metrics: DisplayMetrics = resources.getDisplayMetrics()
-        val dp: Float = px / (metrics.densityDpi as Float / DisplayMetrics.DENSITY_DEFAULT)
+        val dp: Float = px / (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT)
         return dp.toInt()
     }
 
