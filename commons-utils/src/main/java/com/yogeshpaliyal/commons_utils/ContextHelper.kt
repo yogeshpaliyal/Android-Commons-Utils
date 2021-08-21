@@ -1,3 +1,4 @@
+@file:JvmName("ContextHelper")
 package com.yogeshpaliyal.commons_utils
 
 import android.content.Context
@@ -10,7 +11,6 @@ import android.widget.Toast
 * https://techpaliyal.com
 * created on 26-12-2020 19:43
 */
-@JvmName("ContextHelper")
 
 
 

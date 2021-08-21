@@ -1,3 +1,5 @@
+@file:JvmName(name = "IntentHelper")
+
 package com.yogeshpaliyal.commons_utils
 
 import android.content.Context
@@ -11,9 +13,6 @@ import android.net.Uri
 * https://techpaliyal.com
 * created on 26-12-2020 19:46
 */
-
-@JvmName("IntentHelper")
-
 
 fun Context.email(
     chooserTitle: String,

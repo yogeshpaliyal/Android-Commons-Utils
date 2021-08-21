@@ -1,3 +1,5 @@
+@file:JvmName(name = "DateTimeHelper")
+
 package com.yogeshpaliyal.commons_utils
 
 import android.text.format.DateUtils

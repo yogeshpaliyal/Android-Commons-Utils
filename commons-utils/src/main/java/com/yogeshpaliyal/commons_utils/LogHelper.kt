@@ -1,3 +1,6 @@
+@file:JvmName(name = "LogHelper")
+
+
 package com.yogeshpaliyal.commons_utils
 
 import android.util.Log
@@ -9,8 +12,6 @@ import android.util.Log
 * https://techpaliyal.com
 * created on 26-12-2020 20:21
 */
-
-@JvmName("LogHelper")
 
 fun Any?.systemOutPrint() {
     if (BuildConfig.DEBUG) println(this)

@@ -1,5 +1,5 @@
+@file:JvmName("ConversionHelper")
 package com.yogeshpaliyal.commons_utils
-@JvmName("ConversionHelper")
 
 
 /*
