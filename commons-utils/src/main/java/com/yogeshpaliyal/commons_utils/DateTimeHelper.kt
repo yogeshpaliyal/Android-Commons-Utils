@@ -275,7 +275,7 @@ fun Calendar?.formatCalendar(
     dateTimeFormat: String?
 ): String {
     val simpleDateFormat =
-        SimpleDateFormat(dateTimeFormat, Locale.US)
+        SimpleDateFormat(dateTimeFormat, Locale.getDefault())
     return simpleDateFormat.format(this?.time)
 }
 
@@ -283,7 +283,7 @@ fun Long?.formatCalendar(dateTimeFormat: String?): String {
     val calendar = Calendar.getInstance()
     calendar.timeInMillis = this?:0
     val simpleDateFormat =
-        SimpleDateFormat(dateTimeFormat, Locale.US)
+        SimpleDateFormat(dateTimeFormat, Locale.getDefault())
     return simpleDateFormat.format(calendar.time)
 }
 
@@ -291,7 +291,7 @@ fun Long?.formatCalendarFromSec(dateTimeFormat: String?): String {
     val calendar = Calendar.getInstance()
     calendar.timeInMillis = (this?:0)*1000
     val simpleDateFormat =
-        SimpleDateFormat(dateTimeFormat, Locale.US)
+        SimpleDateFormat(dateTimeFormat, Locale.getDefault())
     return simpleDateFormat.format(calendar.time)
 }
 
@@ -301,7 +301,7 @@ fun String?.getCurrentDateTime(
     return try {
         val caledarObj = Calendar.getInstance(timeZone)
         val dateFormatter =
-            SimpleDateFormat(this, Locale.US)
+            SimpleDateFormat(this, Locale.getDefault())
         dateFormatter.timeZone = timeZone
         val dateStr = dateFormatter.format(caledarObj.time)
         caledarObj.clear()
@@ -353,7 +353,7 @@ fun convertDateStrIntoUnixTimeStamp(
 ): Long {
     return try {
         val dateFormatter =
-            SimpleDateFormat(dateFormatStr, Locale.US)
+            SimpleDateFormat(dateFormatStr, Locale.getDefault())
         dateFormatter.timeZone = timeZone
         val date = dateFormatter.parse(dateTimeStr)
         date.time
@@ -370,7 +370,7 @@ fun convertDateStrIntoCalendar(
     return try {
         val cal = Calendar.getInstance()
         val sdf =
-            SimpleDateFormat(dateFormatStr, Locale.US)
+            SimpleDateFormat(dateFormatStr, Locale.getDefault())
         cal.time = sdf.parse(dateTimeStr)
         cal
     } catch (e: Exception) {
@@ -386,7 +386,7 @@ fun convertDateStrIntoCalendar2(
         val cal = Calendar.getInstance()
         val cal1 = Calendar.getInstance()
         val sdf =
-            SimpleDateFormat(dateFormatStr, Locale.US)
+            SimpleDateFormat(dateFormatStr, Locale.getDefault())
         cal.time = sdf.parse(dateTimeStr)
         cal1[Calendar.HOUR_OF_DAY] = cal[Calendar.HOUR_OF_DAY]
         cal1[Calendar.MINUTE] = cal[Calendar.MINUTE]
